@@ -9,7 +9,7 @@ import time
 
 PATH = "/home/michele/Desktop/chromedriver"
 driver = webdriver.Chrome(PATH)
-driver.get("https://scholar.google.com/")       # Yoshua Bengio google scholar profile
+driver.get("https://scholar.google.com/")      
 search = driver.find_element(By.NAME,"q")       # Trovo il marcatore dove è contenuto il banner search di Google Scholar 
 search.send_keys("Pierpaolo De Blasi")          # inserisco nel banner il Nome che voglio cercare
 search.send_keys(Keys.RETURN)
