@@ -66,7 +66,7 @@ def scrape_all_authors_from_university(university_name: str):
     return profile_results
 
 
-auth = scrape_all_authors_from_university(university_name="CollegioCarloAlberto")
+auth = scrape_all_authors_from_university(university_name="CollegioCarloAlberto") # Senza spazi: necessario. Altrimenti ci trova altre persone
 
 DF = pd.DataFrame(auth)
 #DF
@@ -74,7 +74,7 @@ DF = pd.DataFrame(auth)
 
 # Extracting links and save alla papers for each affilates
 
-driver     = webdriver.Chrome(service=Service(ChromeDriverManager().install())) # apro una pagina browser
+driver     = webdriver.Chrome(service=Service(ChromeDriverManager().install()))   # apro una pagina browser
 papers_CCA = {}
 
 for row in DF.iterrows():
