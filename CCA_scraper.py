@@ -73,6 +73,8 @@ DF
 
 # Extracting links and save alla papers for each affilates
 
+# Extracting links and save alla papers for each affilates
+
 driver     = webdriver.Chrome(service=Service(ChromeDriverManager().install())) # apro una pagina browser
 papers_CCA = {}
 
@@ -89,10 +91,28 @@ for row in DF.iterrows():
             element.click()
         except TimeoutException:
             break
-    all_papers = driver.find_elements(By.XPATH,"//a[@class='gsc_a_at']")
+            
+    # block    = driver.find_elements(By.XPATH, "//tr[@class = 'gsc_a_tr']") # this contains all the other infos
+    papers   = driver.find_elements(By.XPATH,"//a[@class='gsc_a_at']")
+    years    = driver.find_elements(By.XPATH, "//span[@class='gsc_a_h gsc_a_hc gs_ibl']")
+    subtitle = driver.find_elements(By.XPATH, "//div[@class='gs_gray']")
     
+    n_papers = len(papers)    # Number of papers in the GS page
     
-    papers_CCA[row[1][0]] = [paper.text for paper in all_papers]
+    titles   = []             # Where I'll save the right titles
+    
+    for i in range(n_papers):
+        
+        if years[i].text == "":
+            pass
+        
+        elif subtitle[i].text == "":
+            pass
+            
+        else:
+            titles.append(f"#{i+1} - {papers[i].text}; Published in {years[i].text}.")
+
+    papers_CCA[row[1][0]] = titles 
 
     
     
