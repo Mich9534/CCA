@@ -29,8 +29,8 @@ def scrape_all_authors_from_university(university_name: str):
     }
 
     profile_results = []
-
     profiles_is_present = True
+    
     while profiles_is_present:
 
         html = requests.get("https://scholar.google.com/citations", params=params, headers=headers, timeout=30)
@@ -57,7 +57,7 @@ def scrape_all_authors_from_university(university_name: str):
 
         # if next page token is present -> update next page token and increment 10 to get the next page
         if select.css("button.gs_btnPR::attr(onclick)").get():
-            # https://regex101.com/r/e0mq0C/1
+        
             params["after_author"] = re.search(r"after_author\\x3d(.*)\\x26", select.css("button.gs_btnPR::attr(onclick)").get()).group(1)  # -> XB0HAMS9__8J
             params["astart"] += 10
         else:
@@ -69,9 +69,8 @@ def scrape_all_authors_from_university(university_name: str):
 auth = scrape_all_authors_from_university(university_name="CollegioCarloAlberto")
 
 DF = pd.DataFrame(auth)
-DF
+#DF
 
-# Extracting links and save alla papers for each affilates
 
 # Extracting links and save alla papers for each affilates
 
