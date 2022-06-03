@@ -1,15 +1,15 @@
-import requests, re, json
-from parsel import Selector
-import pandas as pd
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys  # per inserire testo in un box di testo
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
+import requests, re, json, time
+import pandas                          as pd
+
+from parsel                            import Selector
+from selenium                          import webdriver
+from selenium.webdriver.common.by      import By
+from selenium.webdriver.common.keys    import Keys  # per inserire testo in un box di testo
+from selenium.webdriver.support.ui     import WebDriverWait
+from selenium.webdriver.support        import expected_conditions as EC
+from selenium.common.exceptions        import TimeoutException
 from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-import time
+from webdriver_manager.chrome          import ChromeDriverManager
 
 import requests, re, json
 from parsel import Selector
