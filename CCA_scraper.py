@@ -114,7 +114,7 @@ for row in DF.iterrows():
             
         else:
             conta +=1
-            titles.append(f"#{i+1} - {papers[i].text}; Published in {years[i].text}.")
+            titles.append(f"#{conta} - {papers[i].text}; Published in {years[i].text}.")
 
     papers_CCA[row[1][0]] = titles 
 
