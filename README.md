@@ -1,4 +1,4 @@
-# This is our first Google-Scholar web scraper project.
+# This is our first Google-Scholar web scraping project.
 
 _CCA_scraper-py_ is the main file to use. The other three are older version which are used for testing purposes only.
 
