@@ -103,7 +103,7 @@ for row in DF.iterrows():
     n_papers = len(papers)    # Number of papers in the GS page
     
     titles   = []             # Where I'll save the right titles
-    
+    conta    = 0              # Correct papers number counter. 
     for i in range(n_papers):
         
         if years[i].text == "":
@@ -113,6 +113,7 @@ for row in DF.iterrows():
             pass
             
         else:
+            conta +=1
             titles.append(f"#{i+1} - {papers[i].text}; Published in {years[i].text}.")
 
     papers_CCA[row[1][0]] = titles 
