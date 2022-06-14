@@ -1,3 +1,5 @@
+''' IMPORTING LIBRARIES'''
+
 import requests, re, json, time
 import pandas                          as pd
 
@@ -14,6 +16,7 @@ from webdriver_manager.chrome          import ChromeDriverManager
 import requests, re, json
 from parsel import Selector
 
+'''CCA affiliates Finder'''
 def scrape_all_authors_from_university(university_name: str):
 
     params = {
@@ -71,8 +74,8 @@ auth = scrape_all_authors_from_university(university_name="CollegioCarloAlberto"
 DF = pd.DataFrame(auth)
 #DF
 
-
-# Extracting links and save alla papers for each affilates
+'''Paper Scraper'''
+'''Extracting links and save alla papers for each affilates'''
 
 driver     = webdriver.Chrome(service=Service(ChromeDriverManager().install()))   # apro una pagina browser
 papers_CCA = {}
@@ -84,7 +87,8 @@ for row in DF.iterrows():
     
     wait = WebDriverWait(driver, 1)
     while True:
-        # click SHOW MORE
+    
+        # click SHOW MORE ON GOOGLE SCHOLAR
         try:
             element = wait.until(EC.element_to_be_clickable((By.ID, 'gsc_bpf_more')))
             element.click()
