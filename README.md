@@ -9,6 +9,6 @@ CCA_scraper accounts for three main tasks:
 - **Paper Saver:** saves all the _"good"_ paper for each affilate;
 
 ## Further Developments: 
-- We could adapt the code to more sophisticated librarires. Selenium is the current library, but other libraries exisist such as PyScraper and BeautifulSoup. This might be usefult to make it more scalable to be applied to different type of data. 
+- We could adapt the code to more sophisticated librarires. Selenium is the current library, but other libraries exisist. This might be usefult to make it more scalable to be applied to different type of data. 
 - Otherwise we might also push further this project, extracting for each afiliates its co-authors (internal to CCA or also external) and trying to represents all the publications as a network. We could then perform some network analyses as
 community detection (here I could also use the sampler implemented for my M.Sc. thesis).
