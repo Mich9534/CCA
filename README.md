@@ -2,7 +2,7 @@
 
 _CCA_scraper-py_ is the main file to use. The other three are older version which are used for testing purposes only.
 
-CCA_scraper is respondibles of three main tasks:
+CCA_scraper accounts for three main tasks:
 
 - **CCA affiliates Finder:** it goes on Google Scholar and finds all the CCA affiliates whose are registered on the site;
 - **Paper Scraper:** for each affilate it searches all the paper with at lest one citation or for which exists a publication date;
