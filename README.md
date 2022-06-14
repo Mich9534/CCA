@@ -4,9 +4,9 @@ _CCA_scraper-py_ is the main file to use. The other three are older version whic
 
 CCA_scraper accounts for three main tasks:
 
-- **CCA affiliates Finder:** it goes on Google Scholar and finds all the CCA affiliates whose are registered on the site;
-- **Paper Scraper:** for each affilate it searches all the paper with at lest one citation or for which exists a publication date;
-- **Paper Saver:** saves all the _good_ paper for each affilate;
+- **CCA affiliates Finder:** it goes on Google Scholar and finds all the CCA affiliates registered on the site;
+- **Paper Scraper:** for each affilate it searches all the paper with at lesat one citation or for which exists a publication date;
+- **Paper Saver:** saves all the _"good"_ paper for each affilate;
 
 ## Further Developments: 
 we could adapt the code to more sophisticated librarires. Selenium is the current library, but other libraries exisist such as PyScraper and BeautifulSoup.
